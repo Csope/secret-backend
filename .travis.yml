@@ -1,0 +1,19 @@
+language: php
+php:
+- 7.4
+before_script:
+- sed -ri "s/_DB_PASSWORD_/$DB_PASSWORD/" .env.travis
+- cp .env.travis .env
+- composer self-update
+- composer install --no-interaction
+script:
+- vendor/bin/phpunit
+before_deploy:
+- sed -ri "s/_DB_PASSWORD_/$DB_PASSWORD/" .env.prod
+- cp .env.prod .env
+deploy:
+  provider: heroku
+  app: secret2021
+  api_key: $HEROKU_API_KEY
+  skip_cleanup: true
+

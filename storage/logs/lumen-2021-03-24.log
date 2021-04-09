@@ -1,0 +1,20 @@
+[2021-03-24 09:01:11] DEV.ERROR: Undefined variable: data {"exception":"[object] (ErrorException(code: 0): Undefined variable: data at /data/secret/app/Http/Controllers/SecretApi.php:56)
+[stacktrace]
+#0 /data/secret/app/Http/Controllers/SecretApi.php(56): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(8, 'Undefined varia...', '/data/secret/ap...', 56, Array)
+#1 /data/secret/vendor/illuminate/container/BoundMethod.php(36): App\\Http\\Controllers\\SecretApi->addSecret()
+#2 /data/secret/vendor/illuminate/container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /data/secret/vendor/illuminate/container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /data/secret/vendor/illuminate/container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#5 /data/secret/vendor/illuminate/container/Container.php(611): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#6 /data/secret/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(386): Illuminate\\Container\\Container->call(Array, Array)
+#7 /data/secret/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(352): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#8 /data/secret/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(326): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\SecretApi), 'addSecret', Array)
+#9 /data/secret/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(279): Laravel\\Lumen\\Application->callControllerAction(Array)
+#10 /data/secret/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(264): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#11 /data/secret/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(166): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#12 /data/secret/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(426): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#13 /data/secret/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(172): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#14 /data/secret/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(109): Laravel\\Lumen\\Application->dispatch(NULL)
+#15 /data/secret/public/index.php(34): Laravel\\Lumen\\Application->run()
+#16 {main}
+"} 

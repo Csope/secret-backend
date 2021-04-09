@@ -1,0 +1,16 @@
+
+version: '3'
+services:
+  web:
+    network_mode: bridge
+    image: csope/apache-php:v7.4.4
+    ports:
+    - "5004:80"
+    volumes:
+    - .:/data/secret
+    - logvolume01:/var/log
+    environment:
+    - APACHE_DOCUMENT_ROOT=/data/secret/public
+volumes:
+  logvolume01: {}
+
